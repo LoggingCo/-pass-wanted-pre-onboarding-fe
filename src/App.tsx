@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { RecoilRoot } from 'recoil';
+import MainPage from './pages/mainPage';
+import TodoPage from './pages/todoPage';
+import PrivateRoute from './util/pravateRoute';
+import GlobalStyle from 'style/global';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <RecoilRoot>
+            <BrowserRouter>
+                <GlobalStyle />
+                <Routes>
+                    <Route path="/" element={<MainPage />} />
+                    <Route element={<PrivateRoute />}>
+                        <Route path="/todo" element={<TodoPage />} />
+                    </Route>
+                </Routes>
+            </BrowserRouter>
+        </RecoilRoot>
+    );
 }
 
 export default App;

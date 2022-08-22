@@ -5,9 +5,11 @@ import MainLayout from 'layout/mainLayout';
 import { MainPageInner } from './style';
 import SignModal from 'components/mainCp/signModal';
 import { useNavigate } from 'react-router-dom';
+import { useMedia } from 'hooks/useMedia';
 
 const MainPage = () => {
     const [modal, setModal] = useState<boolean>(false);
+    const { isPc } = useMedia();
 
     const navigate = useNavigate();
     const auth = useRef<string | null>(
@@ -27,7 +29,7 @@ const MainPage = () => {
             {modal && <SignModal setModal={setModal} />}
             <MainLayout setModal={setModal}>
                 <MainPageInner>
-                    <MainBanner />
+                    {isPc && <MainBanner />}
                     <LoginForm />
                 </MainPageInner>
             </MainLayout>

@@ -9,7 +9,7 @@
 
 * 비로그인 시 redirect 구현을 위한 preivateRouter 생성 (순수 react-router 이용)
 <img width="860" alt="useRegExp" src="https://user-images.githubusercontent.com/109440399/185885008-a33578ed-3652-4795-ae93-260f3cf6fb8b.png">
-![praviate2](https://user-images.githubusercontent.com/109440399/185885012-cf849787-6fa0-4f24-827c-684aba237641.jpg)
+<img width="860" alt="praviate2" src="https://user-images.githubusercontent.com/109440399/185885012-cf849787-6fa0-4f24-827c-684aba237641.jpg">
 
 #### 회원가입
 ![sigunup](https://user-images.githubusercontent.com/109440399/185884919-db0dfdc8-ddc0-4fed-83a7-cfdb1f1490c3.gif)
@@ -18,7 +18,6 @@
 
 * 회원가입, 로그인 모두에 필요한 정규표현식 유효성 검사를 위해 훅함수 생성
 <img width="860" alt="prvate" src="https://user-images.githubusercontent.com/109440399/185885013-70518cc9-95e6-4a79-9636-7662d67ca9f5.png">
-
 
 #### 투두리스트 생성 및 업데이트
 ![todocreate](https://user-images.githubusercontent.com/109440399/185884966-b981dc16-1965-4fbd-ba17-d557f06f7c89.gif)

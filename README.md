@@ -1,46 +1,39 @@
-# Getting Started with Create React App
+# 원티드 프리온보딩 프론트엔드 - 선발 과제
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+원티드 프론트 엔드 프리온보딩 선발과제 레퍼지토리
 
-## Available Scripts
+## 시연 영상
 
-In the project directory, you can run:
+#### 리다이렉트
 
-### `npm start`
+![redirect](https://user-images.githubusercontent.com/109440399/185884990-e77dee4c-23ba-4640-8ea2-38cc6a1c54fa.gif)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+-   비로그인 시 redirect 구현을 위한 preivateRouter 생성 (순수 react-router 이용)
+    <img width="860" alt="prvate" src="https://user-images.githubusercontent.com/109440399/185885013-70518cc9-95e6-4a79-9636-7662d67ca9f5.png">
+    <img width="860" alt="praviate2" src="https://user-images.githubusercontent.com/109440399/185885012-cf849787-6fa0-4f24-827c-684aba237641.jpg">
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+#### 회원가입
 
-### `npm test`
+![sigunup](https://user-images.githubusercontent.com/109440399/185884919-db0dfdc8-ddc0-4fed-83a7-cfdb1f1490c3.gif)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### 로그인
 
-### `npm run build`
+![signin](https://user-images.githubusercontent.com/109440399/185884983-d7e9ab07-48cd-4fa4-966b-6ac42b0469a9.gif)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+-   회원가입, 로그인 모두에 필요한 정규표현식 유효성 검사를 위해 커스텀 훅 생성
+    <img width="860" alt="useRegExp" src="https://user-images.githubusercontent.com/109440399/185885008-a33578ed-3652-4795-ae93-260f3cf6fb8b.png">
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### 투두리스트 생성 및 업데이트
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![todocreate](https://user-images.githubusercontent.com/109440399/185884966-b981dc16-1965-4fbd-ba17-d557f06f7c89.gif)
 
-### `npm run eject`
+#### 투두리스트 삭제 및 미수정시 수정 방지
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![todoDelete](https://user-images.githubusercontent.com/109440399/185884979-5d341cc5-ca02-4a73-9154-4621f9255c72.gif)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 설치 및 실행
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```zsh
+$ npm install
+$ npm start
+```

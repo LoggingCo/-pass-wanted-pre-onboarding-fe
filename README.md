@@ -16,7 +16,7 @@
 #### 로그인
 ![signin](https://user-images.githubusercontent.com/109440399/185884983-d7e9ab07-48cd-4fa4-966b-6ac42b0469a9.gif)
 
-* 회원가입, 로그인 모두에 필요한 정규표현식 유효성 검사를 위해 훅함수 생성
+* 회원가입, 로그인 모두에 필요한 정규표현식 유효성 검사를 위해 커스텀 훅 생성
 <img width="860" alt="useRegExp" src="https://user-images.githubusercontent.com/109440399/185885008-a33578ed-3652-4795-ae93-260f3cf6fb8b.png">
 
 #### 투두리스트 생성 및 업데이트

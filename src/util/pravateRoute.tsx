@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { useRef } from 'react';
 import { Navigate, Outlet } from 'react-router-dom';
 

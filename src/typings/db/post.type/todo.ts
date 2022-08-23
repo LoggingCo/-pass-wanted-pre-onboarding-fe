@@ -1,18 +1,18 @@
-export type TodoDataType = {
+export interface TodoDataType {
     id: number;
     todo: string;
     isCompleted: boolean;
     userId: number;
-};
+}
 
-export type TodoPostType = {
+export interface TodoPostType {
     todo: string;
-};
+}
 
-export type TodoUpdateType = {
+export interface TodoUpdateType {
     id: number;
     data: {
         todo: string;
         isCompleted: boolean;
     };
-};
+}

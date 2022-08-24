@@ -6,16 +6,18 @@ import { MainPageInner } from './style';
 import SignModal from 'components/mainCp/signModal';
 import { useNavigate } from 'react-router-dom';
 import { useMedia } from 'hooks/useMedia';
+import TokenService from 'service/tokenService';
 
 const MainPage = () => {
+    // state
     const [modal, setModal] = useState<boolean>(false);
+    // midea
     const { isPc } = useMedia();
-
+    // naviagte
     const navigate = useNavigate();
-    const auth = useRef<string | null>(
-        localStorage.getItem(process.env.REACT_APP_TOEKN_KEY as string),
-    );
-
+    // token
+    const auth = useRef<string | null>(TokenService.get(process.env.REACT_APP_TOEKN_KEY as string));
+    // IsExist token redirect
     useEffect(() => {
         if (auth.current) {
             navigate('/todo', { replace: true });
@@ -23,7 +25,7 @@ const MainPage = () => {
             return;
         }
     }, [navigate]);
-
+    // html
     return (
         <>
             {modal && <SignModal setModal={setModal} />}

@@ -5,6 +5,7 @@ interface MainLayoutProps {
     children?: ReactNode;
     setModal?: Dispatch<SetStateAction<boolean>>;
 }
+
 const MainLayout: FC<MainLayoutProps> = ({ children, setModal }) => {
     return (
         <MainLayoutTemp>

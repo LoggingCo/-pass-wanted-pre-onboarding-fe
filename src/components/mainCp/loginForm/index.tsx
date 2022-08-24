@@ -8,6 +8,7 @@ import { UserDataType } from 'typings/db/post.type/user';
 import { LoginFormTemp } from './style';
 import debug from 'util/debug';
 import { useNavigate } from 'react-router-dom';
+import TokenService from 'service/tokenService';
 
 const LoginForm = () => {
     // util
@@ -24,11 +25,11 @@ const LoginForm = () => {
     const LoginMutate = useMutation((data: UserDataType) => UserSerivce.login(data), {
         onSuccess: response => {
             debug(response);
-            localStorage.setItem(
-                process.env.REACT_APP_TOEKN_KEY as string,
-                response.data.access_token,
-            );
-            if (localStorage.getItem(process.env.REACT_APP_TOEKN_KEY as string)) {
+            TokenService.set({
+                key: process.env.REACT_APP_TOEKN_KEY as string,
+                value: response.data.access_token,
+            });
+            if (TokenService.get(process.env.REACT_APP_TOEKN_KEY as string)) {
                 naviagte('/todo', { replace: true });
             }
         },

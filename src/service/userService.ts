@@ -1,4 +1,3 @@
-import axios from 'axios';
 import { UserDataType } from 'typings/db/post.type/user';
 import { axiosApiInstance } from 'util/axios';
 

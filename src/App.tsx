@@ -12,7 +12,9 @@ function App() {
             <BrowserRouter>
                 <GlobalStyle />
                 <Routes>
+                    {/* public */}
                     <Route path="/" element={<MainPage />} />
+                    {/* praivate */}
                     <Route element={<PrivateRoute />}>
                         <Route path="/todo" element={<TodoPage />} />
                     </Route>

@@ -96,11 +96,11 @@ const TodoList: FC<TodoListProps> = ({ todos, todo, setTodos }) => {
     }, [todo, newTodo]);
 
     // remove func
-
     const todoDeleteHandler = useCallback(() => {
         todoDeleteMutate.mutate(todo.id);
     }, [todo]);
 
+    // render
     return (
         <TodoListCard isCompleted={todo.isCompleted}>
             <div className="todoTitle">

@@ -21,7 +21,7 @@ const LoginForm = () => {
     // regExp result hooks
     const disabled = useRegExp(email, password);
 
-    // react qurey mutate
+    // mutate
     const LoginMutate = useMutation((data: UserDataType) => UserSerivce.login(data), {
         onSuccess: response => {
             debug(response);

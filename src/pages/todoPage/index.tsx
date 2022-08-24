@@ -10,13 +10,15 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 
 const TodoPage = () => {
+    // react qurey userQurey
     const todoRead = useQuery(['todoList'], () => TodoService.read());
+    // state
     const [todos, setTodos] = useState<Array<TodoDataType>>([]);
-
+    // setState Todos
     useEffect(() => {
         setTodos(todoRead.data?.data);
     }, [todoRead.data?.data]);
-
+    // render
     return (
         <MainLayout>
             <TodoPageInner>

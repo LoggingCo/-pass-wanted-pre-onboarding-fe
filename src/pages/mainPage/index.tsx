@@ -25,7 +25,7 @@ const MainPage = () => {
             return;
         }
     }, [navigate]);
-    // html
+    // render
     return (
         <>
             {modal && <SignModal setModal={setModal} />}

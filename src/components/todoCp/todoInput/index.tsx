@@ -9,6 +9,7 @@ import debug from 'util/debug';
 import { Dispatch } from 'react';
 import { FC } from 'react';
 
+//type
 interface TodoInputType {
     todos: Array<TodoDataType>;
     setTodos: Dispatch<SetStateAction<TodoDataType[]>>;
@@ -19,7 +20,7 @@ const TodoInput: FC<TodoInputType> = ({ todos, setTodos }) => {
     const [todoText, onChangeTodoText, setTodoText] = useInput('');
 
     // mutate
-    const SignUpMutate = useMutation((data: TodoPostType) => TodoService.create(data), {
+    const todoMutate = useMutation((data: TodoPostType) => TodoService.create(data), {
         onSuccess: response => {
             debug(response);
             alert('투두리스트가 등록되었습니다');
@@ -32,6 +33,7 @@ const TodoInput: FC<TodoInputType> = ({ todos, setTodos }) => {
         },
     });
 
+    // create todo func
     const onCreateTodoHandler = useCallback(
         (e: any) => {
             e.preventDefault();
@@ -41,12 +43,13 @@ const TodoInput: FC<TodoInputType> = ({ todos, setTodos }) => {
                 const data = {
                     todo: todoText,
                 };
-                SignUpMutate.mutate(data);
+                todoMutate.mutate(data);
             }
         },
         [todoText],
     );
 
+    // render
     return (
         <TodoInpuTemp>
             <input type="text" value={todoText} onChange={onChangeTodoText} />

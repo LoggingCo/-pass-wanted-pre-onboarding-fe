@@ -46,7 +46,7 @@ const TodoInput: FC<TodoInputType> = ({ todos, setTodos }) => {
                 todoMutate.mutate(data);
             }
         },
-        [todoText],
+        [todoText, todoMutate],
     );
 
     // render

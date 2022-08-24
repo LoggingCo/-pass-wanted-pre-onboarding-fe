@@ -77,7 +77,7 @@ const TodoList: FC<TodoListProps> = ({ todos, todo, setTodos }) => {
             },
         };
         completeUpdateMutate.mutate(data);
-    }, [todo]);
+    }, [todo, completeUpdateMutate]);
 
     // only state todo func
     const todoUpdateHandler = useCallback(() => {
@@ -93,12 +93,12 @@ const TodoList: FC<TodoListProps> = ({ todos, todo, setTodos }) => {
             };
             todoUpdateMutate.mutate(data);
         }
-    }, [todo, newTodo]);
+    }, [todo, newTodo, todoUpdateMutate]);
 
     // remove func
     const todoDeleteHandler = useCallback(() => {
         todoDeleteMutate.mutate(todo.id);
-    }, [todo]);
+    }, [todo, todoDeleteMutate]);
 
     // render
     return (

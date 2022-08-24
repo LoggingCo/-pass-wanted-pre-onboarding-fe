@@ -59,7 +59,7 @@ const SignModal: FC<SignModalProp> = ({ setModal }) => {
         } else {
             SignUpMutate.mutate(data);
         }
-    }, [email, password]);
+    }, [email, password, SignUpMutate]);
 
     return (
         <BlackBackGroundTemp>

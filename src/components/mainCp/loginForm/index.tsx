@@ -51,7 +51,7 @@ const LoginForm = () => {
         } else {
             LoginMutate.mutate(data);
         }
-    }, [email, password]);
+    }, [email, password, LoginMutate]);
 
     // render
     return (
